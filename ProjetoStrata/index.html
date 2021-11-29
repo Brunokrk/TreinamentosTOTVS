@@ -14,7 +14,7 @@
 </head>
 <body>
     <header class='main-header'>
-        <a hreef='index.html' class="main-header-link"> 
+        <a hreef='index.html' class="main-header-link imagem-link"> 
             <img src='images/avatar.jpg' alt='texto qualquer'>
         </a>
         <h1 class='main-header-title'>
@@ -33,84 +33,109 @@
 
         </section>
         <section class='main-content-section'>
-            <article class='recent-works-cards'>
-                <a href="images/fulls/01.jpg">
-                    <img src='images/fulls/01.jpg' title='descrição'>
-                </a>
-                <p class='recent-works-card-title'>Magma sed consequant tempus</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
+            <h3>Recent Works</h3>
 
-            <article class='recent-works-cards'>
-                <a href="images/fulls/02.jpg">
-                    <img src='images/fulls/02.jpg' title='descrição'>
-                </a>
-                <p class='recent-works-card-title'>Magma sed consequant tempus</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
-
-            <article class='recent-works-cards'>
-                <a href="images/fulls/03.jpg">
-                    <img src='images/fulls/03.jpg' title='descrição'>
-                </a>
-                <p class='recent-works-card-title'>Magma sed consequant tempus</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
-
-            <article class='recent-works-cards'>
-                <a href="images/fulls/04.jpg">
-                    <img src='images/fulls/04.jpg' title='descrição'>
-                </a>
-                <p class='recent-works-card-title'>Magma sed consequant tempus</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
-
-            <article class='recent-works-cards'>
-                <a href="images/fulls/05.jpg">
-                    <img src='images/fulls/05.jpg' title='descrição'>
-                </a>
-                <p class='recent-works-card-title'>Magma sed consequant tempus</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
-
-            <article class='recent-works-cards'>
-                <a href="images/fulls/06.jpg">
-                    <img src='images/fulls/06.jpg' title='descrição'>
-                </a>
-                <p class='recent-works-card-title'>Magma sed consequant tempus</p>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-            </article>
+            <div class='row'>
+                <div class='col-2'>
+                    <article class='recent-works-cards'>
+                        <a class='imagem-link' href="images/fulls/01.jpg">
+                            <img src='images/fulls/01.jpg' title='descrição'>
+                        </a>
+                        <p class='recent-works-card-title'>Magma sed consequant tempus</p>
+                        <p class='recent-works-card-paragraph'>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
+        
+                    <article class='recent-works-cards'>
+                        <a class='imagem-link' href="images/fulls/02.jpg">
+                            <img src='images/fulls/02.jpg' title='descrição'>
+                        </a>
+                        <p class='recent-works-card-title'>Magma sed consequant tempus</p>
+                        <p class='recent-works-card-paragraph'>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
+        
+                    <article class='recent-works-cards'>
+                        <a class='imagem-link' href="images/fulls/03.jpg">
+                            <img src='images/fulls/03.jpg' title='descrição'>
+                        </a>
+                        <p class='recent-works-card-title'>Magma sed consequant tempus</p>
+                        <p class='recent-works-card-paragraph'>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
+                </div>
+                <div class='col-2'>
+                    <article class='recent-works-cards'>
+                        <a class='imagem-link' href="images/fulls/04.jpg">
+                            <img src='images/fulls/04.jpg' title='descrição'>
+                        </a>
+                        <p class='recent-works-card-title'>Magma sed consequant tempus</p>
+                        <p class='recent-works-card-paragraph'>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
+        
+                    <article class='recent-works-cards'>
+                        <a class='imagem-link' href="images/fulls/05.jpg">
+                            <img src='images/fulls/05.jpg' title='descrição'>
+                        </a>
+                        <p class='recent-works-card-title'>Magma sed consequant tempus</p>
+                        <p class='recent-works-card-paragraph'>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
+        
+                    <article class='recent-works-cards'>
+                        <a class='imagem-link' href="images/fulls/06.jpg">
+                            <img src='images/fulls/06.jpg' title='descrição'>
+                        </a>
+                        <p class='recent-works-card-title'>Magma sed consequant tempus</p>
+                        <p class='recent-works-card-paragraph'>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                    </article>
+                </div>
+            </div>
         </section>
+
 
         <section class='main-content-section'>
             <h3>Get in Touch</h3>
             <p>Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Copo furadis é disculpa de bebadis, arcu quam euismod magna. A ordem dos tratores não altera o pão duris. Viva Forevis aptent taciti sociosqu ad litora torquent.</p>
-            <form action='#' method='POST'>
-                <label for='nome'>Nome</label>
-                <input type='text' name='nome' id='nome'>
 
-                <label for='email'>Email</label>
-                <input type='text' name='email' id='email'>
+            <div class='row'>
+                <div class='col-2-3'>
+                    <form action='#' method='POST'>
+                        <div class='row'>
+                            <div class='col-2'>
+                                <label for='nome'>Nome</label>
+                                <input type='text' name='nome' id='nome'>
+                            </div>
+                            <div class='col-2'>
+                                <label for='email'>Email</label>
+                                <input type='text' name='email' id='email'>
+                            </div>
 
-                <label for='mensagem'>Digite sua mensagem</label>
-                <textarea  name='mensagem' id='mensagem'></textarea>
+                        </div>
+        
+        
+                        <label for='mensagem'>Digite sua mensagem</label>
+                        <textarea  name='mensagem' id='mensagem'></textarea>
+        
+                        <input type='submit'value='Enviar' class='button-dafault button-default-stroke'>
+                    </form>
 
-                <input type='submit'value='Enviar'>
-            </form>
-            <address>
-                <p>
-                    <span>Endereço</span>
-                    1234 Somewhere Rd. Nashville, TN 00000 United States
-                </p>
-                <p>
-                    <span>Telefone</span>
-                    000-000-000
-                </p>
-                <p>
-                    <span>E-mail</span>
-                    email@email.com
-                </p>
-            </address>
+                </div>
+                <div class='col-1-3'>
+                    <address>
+                        <p>
+                            <span>Endereço</span>
+                            1234 Somewhere Rd. Nashville, TN 00000 United States
+                        </p>
+                        <p>
+                            <span>Telefone</span>
+                            000-000-000
+                        </p>
+                        <p>
+                            <span>E-mail</span>
+                            email@email.com
+                        </p>
+                    </address>
+                </div>
+
+            </div>
+
         </section>
 
         <section class='main-content-section'>
@@ -251,7 +276,7 @@ alert('oi')
             </table>
 
             <h5>Alternate</h5>
-            <table class='table-alternate'>
+            <table class='table table-alternate'>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -338,8 +363,8 @@ alert('oi')
             <label for='msg'>Mensagem</label>
             <textarea placeholder="Digite uma mensagem" id='msg'></textarea>
 
-            <input type='submit' class='button-dafault' value='Enviar'>
-            <input type='reset' class='button-default-stroke' value='limpar'>
+            <input type='submit' class='button-default ' value='Enviar'>
+            <input type='reset' class='button-default button-default-stroke' value='limpar'>
         </section>
 
         <section class='main-content-section'>
@@ -347,16 +372,16 @@ alert('oi')
             <div class='gallery-img'>
                 <img src='images/fulls/01.jpg' alt=''>
             </div>
-            <div class='gallery-thumb'> 
-                <img src='images/thumbs/01.jpg'alt=''>
-                <img src='images/thumbs/02.jpg'alt=''>
-                <img src='images/thumbs/03.jpg'alt=''>
-                <img src='images/thumbs/04.jpg'alt=''>
-                <img src='images/thumbs/05.jpg'alt=''>
-                <img src='images/thumbs/06.jpg'alt=''>
-                <img src='images/thumbs/07.jpg'alt=''>
-                <img src='images/thumbs/08.jpg'alt=''>
-                <img src='images/thumbs/09.jpg'alt=''>
+            <div class='gallery-thumb row'> 
+                <img class='col-1-3' src='images/thumbs/01.jpg'alt=''>
+                <img class='col-1-3' src='images/thumbs/02.jpg'alt=''>
+                <img class='col-1-3' src='images/thumbs/03.jpg'alt=''>
+                <img class='col-1-3' src='images/thumbs/04.jpg'alt=''>
+                <img class='col-1-3' src='images/thumbs/05.jpg'alt=''>
+                <img class='col-1-3' src='images/thumbs/06.jpg'alt=''>
+                <img class='col-1-3' src='images/thumbs/03.jpg'alt=''>
+                <img class='col-1-3' src='images/thumbs/02.jpg'alt=''>
+                <img class='col-1-3' src='images/thumbs/01.jpg'alt=''>
 
             </div>
 
