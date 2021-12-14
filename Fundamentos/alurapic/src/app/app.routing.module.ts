@@ -1,6 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { AuthGuard } from "./core/auth/auth.guard";
 import { NotFoundComponent } from "./errors/not-found/not-found.component";
+import { SignInComponent } from "./home/signin/signin.component";
 
 import { PhotoFormComponent } from "./photos/photo-form/photo-form.component";
 import { PhotoListComponent } from "./photos/photo-list/photo-list.component";
@@ -19,6 +21,12 @@ const routes: Routes = [
     path:'p/add', component:PhotoFormComponent
   },
   {
+    path: '',
+    component:SignInComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    //Rota de fallBack
     path:'**', component:NotFoundComponent
   }
 ];
