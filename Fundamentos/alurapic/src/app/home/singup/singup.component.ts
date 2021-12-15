@@ -7,12 +7,13 @@ import { SignUpService } from './signup.service';
 import { Router } from '@angular/router';
 
 @Component({
-    templateUrl: './signup.component.html'
+    templateUrl: './signup.component.html',
+    providers:[UserNotTakenValidatorService]
 })
 export class SignUpComponent implements OnInit {
-    
+
     signupForm: FormGroup;
-    
+
     constructor(
         private formBuilder: FormBuilder,
         private userNotTakenValidatorService: UserNotTakenValidatorService,
@@ -21,20 +22,20 @@ export class SignUpComponent implements OnInit {
 
     ngOnInit(): void {
         this.signupForm = this.formBuilder.group({
-            email: ['', 
+            email: ['',
                 [
                     Validators.required,
                     Validators.email
                 ]
             ],
-            fullName: ['', 
+            fullName: ['',
                 [
                     Validators.required,
                     Validators.minLength(2),
                     Validators.maxLength(40)
                 ]
             ],
-            userName: ['', 
+            userName: ['',
                 [
                     Validators.required,
                     lowerCaseValidator,
@@ -43,7 +44,7 @@ export class SignUpComponent implements OnInit {
                 ],
                 this.userNotTakenValidatorService.checkUserNameTaken()
             ],
-            password: ['', 
+            password: ['',
                 [
                     Validators.required,
                     Validators.minLength(8),
@@ -51,7 +52,7 @@ export class SignUpComponent implements OnInit {
                 ]
             ]
         });
-    } 
+    }
 
     signup() {
         const newUser = this.signupForm.getRawValue() as NewUser;
