@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { PhotoService } from '../photo/photo.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ap-photo-form',
@@ -10,10 +10,15 @@ import { PhotoService } from '../photo/photo.service';
 })
 export class PhotoFormComponent implements OnInit {
 
-  photoForm : FormGroup;
+  photoForm: FormGroup;
   file: File;
   preview: string;
-  constructor(private formBuilder : FormBuilder, private photoService: PhotoService, private router:Router) { }
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private photoService: PhotoService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.photoForm = this.formBuilder.group({
@@ -38,5 +43,3 @@ export class PhotoFormComponent implements OnInit {
     reader.readAsDataURL(file);
   }
 }
-
-
