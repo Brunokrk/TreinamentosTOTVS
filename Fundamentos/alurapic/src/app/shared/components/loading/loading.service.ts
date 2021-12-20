@@ -1,15 +1,17 @@
-import { Injectable} from "@angular/core";
-import { LoadingType} from "./loading-type";
+import { Injectable } from "@angular/core";
+import { LoadingType } from "./loading-type";
 import { Subject } from "rxjs";
 import { startWith } from "rxjs/operators";
 
-@Injectable ({ providedIn : 'root'})
-export class LoadingService {
+@Injectable({ providedIn: 'root' })
+export class LoadingService { 
 
     loadingSubject = new Subject<LoadingType>();
 
     getLoading() {
-        return this.loadingSubject.asObservable().pipe(startWith(LoadingType.STOPPED));
+        return this.loadingSubject
+            .asObservable()
+            .pipe(startWith(LoadingType.STOPPED));
     }
 
     start() {
@@ -18,5 +20,5 @@ export class LoadingService {
 
     stop() {
         this.loadingSubject.next(LoadingType.STOPPED);
-    }
+    }    
 }

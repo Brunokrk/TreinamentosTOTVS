@@ -1,6 +1,4 @@
-
-export enum LoadingType{
-  LOADING = 'loading',
-  STOPPED = 'stopped'
+export enum LoadingType {
+    LOADING = 'loading',
+    STOPPED = 'stopped'
 }
-
