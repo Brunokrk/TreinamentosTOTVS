@@ -4,7 +4,11 @@ import { Injectable } from '@angular/core';
 import { Photo } from "./photo";
 import { PhotoComment } from './photo-comment';
 
-const API = 'http://localhost:3000';
+import { environment } from '../../../environments/environment';
+import { map, catchError } from 'rxjs/operators';
+import { of, throwError } from 'rxjs';
+
+const API = environment.ApiUrl;
 
 @Injectable({ providedIn: 'root' })
 export class PhotoService {
@@ -13,7 +17,7 @@ export class PhotoService {
 
     listFromUser(userName: string) {
         return this.http
-            .get<Photo[]>(API + '/' + userName + '/photos');
+            .get<Photo[]>(API + '/' + userName + '/photos');       
     }
 
     listFromUserPaginated(userName: string, page: number) {
@@ -21,11 +25,11 @@ export class PhotoService {
             .append('page', page.toString());
 
         return this.http
-            .get<Photo[]>(API + '/' + userName + '/photos', { params });
-    }
-
+            .get<Photo[]>(API + '/' + userName + '/photos', { params });       
+    } 
+    
     upload(description: string, allowComments: boolean, file: File) {
-
+        
         const formData = new FormData();
         formData.append('description', description);
         formData.append('allowComments', allowComments ? 'true' : 'false');
@@ -51,10 +55,21 @@ export class PhotoService {
         return this.http.post(
             API + '/photos/' + photoId + '/comments',
             { commentText }
-        );
+        );        
     }
 
-    removePhoto(photoId: number){
-      return this.http.delete(API+'/photos/'+photoId)
+    removePhoto(photoId: number) {
+        return this.http.delete(API + '/photos/' + photoId);
+    }
+
+    like(photoId: number) {
+
+        return this.http.post(
+            API + '/photos/' + photoId + '/like', {}, { observe: 'response'}
+        )
+        .pipe(map(res => true))
+        .pipe(catchError(err => {
+            return err.status == '304' ? of(false) : throwError(err);
+        }));
     }
 }
