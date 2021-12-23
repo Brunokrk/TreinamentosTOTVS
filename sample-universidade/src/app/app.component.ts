@@ -8,8 +8,6 @@ import { PoMenuItem } from '@po-ui/ng-components';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
 
-  onSubmit(event){
-    alert(JSON.stringify(event));
-  }
 }
