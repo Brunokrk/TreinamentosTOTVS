@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PoModule } from '@po-ui/ng-components';
 import { RouterModule } from '@angular/router';
+import { TabelaTesteComponent } from './tabela-teste/tabela-teste.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    TabelaTesteComponent,
   ],
   imports: [
     BrowserModule,

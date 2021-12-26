@@ -9,7 +9,7 @@ import { PoTableColumn } from '@po-ui/ng-components';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  /*
   items= [
     { 'Emissor Fact': 'item 1',
       'Nomb Abreviado':'item 1',
@@ -19,7 +19,6 @@ export class AppComponent {
       'Mod Opr Fct': 'item 1',
       'denominacion': 'item 1'
     }
-
   ];
-
+  */
 }
