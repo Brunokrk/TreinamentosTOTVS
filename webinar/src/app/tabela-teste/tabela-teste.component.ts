@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PoTableColumn } from '@po-ui/ng-components';
+import { TabelaTesteService } from './tabela-teste.service'
 
 @Component({
   selector: 'app-tabela-teste',
@@ -7,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabelaTesteComponent implements OnInit {
 
+  columns: Array<PoTableColumn>;
+  items: Array<any>;
+
+
+  /*
   items= [
     { 'Emissor Fact': 'item 1',
       'Nomb Abreviado':'item 1',
@@ -17,10 +24,12 @@ export class TabelaTesteComponent implements OnInit {
       'denominacion': 'item 1'
     }
   ];
-
-  constructor() { }
+  */
+  constructor(private tabelaTesteService : TabelaTesteService) { }
 
   ngOnInit(): void {
+    this.columns = this.tabelaTesteService.getColumns();
+    this.items = this.tabelaTesteService.getItems();
   }
 
 }
