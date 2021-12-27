@@ -12,19 +12,6 @@ export class TabelaTesteComponent implements OnInit {
   columns: Array<PoTableColumn>;
   items: Array<any>;
 
-
-  /*
-  items= [
-    { 'Emissor Fact': 'item 1',
-      'Nomb Abreviado':'item 1',
-      'Nro Contratante': 'item 1',
-      'Serie NF': 'item 1',
-      'Número FT': 'item 1',
-      'Mod Opr Fct': 'item 1',
-      'denominacion': 'item 1'
-    }
-  ];
-  */
   constructor(private tabelaTesteService : TabelaTesteService) { }
 
   ngOnInit(): void {
