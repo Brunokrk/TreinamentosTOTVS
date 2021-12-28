@@ -19,4 +19,5 @@ export class TabelaTesteComponent implements OnInit {
     this.items = this.tabelaTesteService.getItems();
   }
 
+  
 }
